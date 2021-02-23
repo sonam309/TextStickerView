@@ -1,6 +1,7 @@
 package com.textstickerlib;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -147,6 +148,8 @@ public abstract class StickerView extends FrameLayout {
         this.iv_edit.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
             }
         });
