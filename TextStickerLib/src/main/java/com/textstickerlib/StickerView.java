@@ -17,15 +17,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public abstract class StickerView extends FrameLayout {
 
     public static final String TAG = "com.knef.stickerView";
-    private BorderView iv_border;
-    private ImageView iv_scale;
-    private ImageView iv_delete;
-    private ImageView iv_rotate;
-    private ImageView iv_edit;
+    public BorderView iv_border;
+    public ImageView iv_scale;
+    public ImageView iv_delete;
+    public ImageView iv_rotate;
+    public ImageView iv_edit;
+    private OnStickerOperationListener onStickerOperationListener;
+
 
     // For scalling
     private float this_orgX = -1, this_orgY = -1;
@@ -149,7 +155,9 @@ public abstract class StickerView extends FrameLayout {
             @Override
             public void onClick(View v) {
 
-
+                if (StickerView.this.getParent() != null) {
+                    onStickerOperationListener.onStickerAdded();
+                }
 
             }
         });
@@ -446,6 +454,7 @@ public abstract class StickerView extends FrameLayout {
             iv_border.setVisibility(View.GONE);
             iv_delete.setVisibility(View.GONE);
             iv_scale.setVisibility(View.GONE);
+            iv_rotate.setVisibility(View.GONE);
             iv_edit.setVisibility(View.GONE);
 
         } else {
@@ -453,9 +462,39 @@ public abstract class StickerView extends FrameLayout {
             iv_delete.setVisibility(View.VISIBLE);
             iv_scale.setVisibility(View.VISIBLE);
             iv_edit.setVisibility(View.VISIBLE);
+            iv_rotate.setVisibility(View.VISIBLE);
 
         }
 
-
     }
+
+    @NonNull
+    public StickerView setOnStickerOperationListener(
+            @Nullable OnStickerOperationListener onStickerOperationListener) {
+        this.onStickerOperationListener = onStickerOperationListener;
+        return this;
+    }
+
+    @Nullable public OnStickerOperationListener getOnStickerOperationListener() {
+        return onStickerOperationListener;
+    }
+
+    public interface OnStickerOperationListener {
+        void onStickerAdded();
+
+//        void onStickerClicked();
+//
+//        void onStickerDeleted();
+//
+//        void onStickerDragFinished();
+//
+//        void onStickerTouchedDown();
+//
+//        void onStickerZoomFinished();
+//
+//        void onStickerFlipped();
+//
+//        void onStickerDoubleTapped();
+    }
+
 }

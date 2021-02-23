@@ -1,11 +1,17 @@
 package com.textsticker;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.textstickerlib.StickerTextView;
+import com.textstickerlib.StickerView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,8 +27,27 @@ public class MainActivity extends AppCompatActivity {
 
         // add a stickerText to canvas
         StickerTextView tv_sticker = new StickerTextView(this);
-        tv_sticker.setText("hello everyOne");
+        tv_sticker.setText("hello India");
         parent_fl.addView(tv_sticker);
+
+       tv_sticker.setOnStickerOperationListener(new StickerView.OnStickerOperationListener() {
+           @Override
+           public void onStickerAdded() {
+
+               Toast.makeText(MainActivity.this, "edit", Toast.LENGTH_SHORT).show();
+
+           }
+       });
+
+       parent_fl.setOnTouchListener(new View.OnTouchListener() {
+           @Override
+           public boolean onTouch(View v, MotionEvent event) {
+
+               tv_sticker.setControlsVisibility(false);
+
+               return true;
+           }
+       });
 
     }
 }
