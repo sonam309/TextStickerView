@@ -1,3 +1,5 @@
+include ':TextStickerLib-1.0'
 include ':TextStickerLib'
 include ':app'
+project(':TextStickerLib-1.0').projectDir = new File(rootDir, 'TextStickerLib/')
 rootProject.name = "TextSticker"

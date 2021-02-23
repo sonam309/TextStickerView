@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TextSticker.iml" filepath="$PROJECT_DIR$/.idea/modules/TextSticker.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TextStickerLib/TextSticker.TextStickerLib.iml" filepath="$PROJECT_DIR$/.idea/modules/TextStickerLib/TextSticker.TextStickerLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TextStickerLib/TextSticker.TextStickerLib-1.0.iml" filepath="$PROJECT_DIR$/.idea/modules/TextStickerLib/TextSticker.TextStickerLib-1.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TextSticker.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TextSticker.app.iml" />
     </modules>
   </component>
