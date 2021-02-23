@@ -119,13 +119,6 @@ public abstract class StickerView extends FrameLayout {
                 );
         iv_delete_params.gravity = Gravity.TOP | Gravity.RIGHT;
 
-        LayoutParams iv_flip_params =
-                new LayoutParams(
-                        convertDpToPixel(BUTTON_SIZE_DP, getContext()),
-                        convertDpToPixel(BUTTON_SIZE_DP, getContext())
-                );
-        iv_flip_params.gravity = Gravity.TOP | Gravity.LEFT;
-
         LayoutParams iv_rotate_params =
                 new LayoutParams(
                         convertDpToPixel(BUTTON_SIZE_DP, getContext()),
@@ -173,9 +166,9 @@ public abstract class StickerView extends FrameLayout {
     }
 
 
-    public boolean isFlip() {
-        return getMainView().getRotationY() == -180f;
-    }
+//    public boolean isFlip() {
+//        return getMainView().getRotationY() == -180f;
+//    }
 
     protected abstract View getMainView();
 
