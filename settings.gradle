@@ -1,0 +1,3 @@
+include ':TextStickerLib'
+include ':app'
+rootProject.name = "TextSticker"
