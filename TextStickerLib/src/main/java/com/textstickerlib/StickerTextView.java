@@ -30,8 +30,6 @@ public class StickerTextView extends StickerView {
     }
 
 
-
-
     @Override
     protected View getMainView() {
 
@@ -39,13 +37,12 @@ public class StickerTextView extends StickerView {
             return textView;
         }
 
-        textView= new AutoResizeTextView(getContext());
-        textView.setGravity(Gravity.CENTER|Gravity.CENTER_VERTICAL|Gravity.CENTER_HORIZONTAL);
+        textView = new AutoResizeTextView(getContext());
+        textView.setGravity(Gravity.CENTER | Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
         textView.setTextColor(Color.BLACK);
         textView.setSingleLine(false);
         textView.setTextSize(5000);
         textView.setMinTextSize(5);
-
 
 
         LayoutParams params = new LayoutParams(
@@ -58,24 +55,19 @@ public class StickerTextView extends StickerView {
 
 
 
-        if(getImageViewFlip()!=null) {
-
-            getImageViewFlip().setVisibility(View.GONE);
-
-        }
 
 
         return textView;
     }
 
 
-    public void setText(String text){
-        if(textView!=null)
+    public void setText(String text) {
+        if (textView != null)
             textView.setText(text);
     }
 
-    public String getText(){
-        if(textView!=null)
+    public String getText() {
+        if (textView != null)
             return textView.getText().toString();
 
         return null;
@@ -83,7 +75,7 @@ public class StickerTextView extends StickerView {
 
     public static float pixelsToSp(Context context, float px) {
         float scaledDensity = context.getResources().getDisplayMetrics().scaledDensity;
-        return px/scaledDensity;
+        return px / scaledDensity;
     }
 
     @Override

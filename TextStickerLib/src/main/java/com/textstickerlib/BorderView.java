@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 public class BorderView extends View {
 
 
-
     public BorderView(Context context) {
         super(context);
     }
@@ -28,37 +27,34 @@ public class BorderView extends View {
     }
 
 
-
-
-
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
 
-        FrameLayout.LayoutParams params= (FrameLayout.LayoutParams) this.getLayoutParams();
+        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) this.getLayoutParams();
 
         /**
          *  Rect four integer coordinates for a rectangle.
          */
 
-        Rect border= new Rect();
+        Rect border = new Rect();
 
         /**
          *  get margin from layout and set into Rect
          */
 
-        border.left=this.getLeft()-params.leftMargin;
-        border.right=this.getRight()-params.rightMargin;
-        border.top=this.getTop()-params.topMargin;
-        border.bottom=this.getBottom()-params.bottomMargin;
+        border.left = this.getLeft() - params.leftMargin;
+        border.right = this.getRight() - params.rightMargin;
+        border.top = this.getTop() - params.topMargin;
+        border.bottom = this.getBottom() - params.bottomMargin;
 
 
         /**
          * The Paint class holds the style and color information about how to draw geometries, text and bitmaps.
          */
 
-        Paint borderPaint= new Paint();
+        Paint borderPaint = new Paint();
 
         borderPaint.setStrokeWidth(5);
         borderPaint.setColor(Color.BLACK);
