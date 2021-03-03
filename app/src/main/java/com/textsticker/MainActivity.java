@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         // add a stickerText to canvas
         StickerTextView tv_sticker = new StickerTextView(this);
         tv_sticker.setText("hello India");
+        tv_sticker.setTextcolor(getResources().getColor(R.color.design_default_color_error));
+
         parent_fl.addView(tv_sticker);
 
        tv_sticker.setOnStickerOperationListener(new StickerView.OnStickerOperationListener() {

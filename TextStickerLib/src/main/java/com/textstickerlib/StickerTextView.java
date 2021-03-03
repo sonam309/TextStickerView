@@ -42,7 +42,7 @@ public class StickerTextView extends StickerView {
         textView.setTextColor(Color.BLACK);
         textView.setSingleLine(false);
         textView.setTextSize(5000);
-        textView.setMinTextSize(5);
+        textView.setMinTextSize(10);
 
 
         LayoutParams params = new LayoutParams(
@@ -66,6 +66,14 @@ public class StickerTextView extends StickerView {
             textView.setText(text);
     }
 
+    public void setTextcolor(int color){
+
+        if(textView!=null){
+
+            textView.setTextColor(color);
+        }
+
+    }
     public String getText() {
         if (textView != null)
             return textView.getText().toString();

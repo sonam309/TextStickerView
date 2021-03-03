@@ -156,6 +156,7 @@ public abstract class StickerView extends FrameLayout {
             public void onClick(View v) {
 
                 if (StickerView.this.getParent() != null) {
+
                     onStickerOperationListener.onStickerAdded();
                 }
 
