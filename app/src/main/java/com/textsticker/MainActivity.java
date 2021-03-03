@@ -1,10 +1,8 @@
 package com.textsticker;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        parent_fl=findViewById(R.id.parent_fl);
+        parent_fl = findViewById(R.id.parent_fl);
 
 
         // add a stickerText to canvas
@@ -32,24 +30,24 @@ public class MainActivity extends AppCompatActivity {
 
         parent_fl.addView(tv_sticker);
 
-       tv_sticker.setOnStickerOperationListener(new StickerView.OnStickerOperationListener() {
-           @Override
-           public void onStickerAdded() {
+        tv_sticker.setOnStickerOperationListener(new StickerView.OnStickerOperationListener() {
+            @Override
+            public void onStickerAdded() {
 
-               Toast.makeText(MainActivity.this, "edit", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "edit", Toast.LENGTH_SHORT).show();
 
-           }
-       });
+            }
+        });
 
-       parent_fl.setOnTouchListener(new View.OnTouchListener() {
-           @Override
-           public boolean onTouch(View v, MotionEvent event) {
+        parent_fl.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
 
-               tv_sticker.setControlsVisibility(false);
+                tv_sticker.setControlsVisibility(false);
 
-               return true;
-           }
-       });
+                return true;
+            }
+        });
 
     }
 }

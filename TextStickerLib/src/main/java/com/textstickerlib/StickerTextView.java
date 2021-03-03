@@ -54,9 +54,6 @@ public class StickerTextView extends StickerView {
         textView.setLayoutParams(params);
 
 
-
-
-
         return textView;
     }
 
@@ -66,14 +63,15 @@ public class StickerTextView extends StickerView {
             textView.setText(text);
     }
 
-    public void setTextcolor(int color){
+    public void setTextcolor(int color) {
 
-        if(textView!=null){
+        if (textView != null) {
 
             textView.setTextColor(color);
         }
 
     }
+
     public String getText() {
         if (textView != null)
             return textView.getText().toString();
