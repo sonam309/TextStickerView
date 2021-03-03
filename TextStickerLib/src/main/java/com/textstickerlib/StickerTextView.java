@@ -41,8 +41,8 @@ public class StickerTextView extends StickerView {
         textView.setGravity(Gravity.CENTER | Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
         textView.setTextColor(Color.BLACK);
         textView.setSingleLine(false);
-        textView.setTextSize(5000);
-        textView.setMinTextSize(10);
+        textView.setTextSize(10000);
+        textView.setMinTextSize(22);
 
 
         LayoutParams params = new LayoutParams(
@@ -61,6 +61,16 @@ public class StickerTextView extends StickerView {
     public void setText(String text) {
         if (textView != null)
             textView.setText(text);
+    }
+
+    public void setTextGravity(int gravity){
+
+        if(textView!=null){
+
+            textView.setGravity(gravity);
+
+        }
+
     }
 
     public void setTextcolor(int color) {

@@ -147,6 +147,7 @@ public abstract class StickerView extends FrameLayout {
         this.addView(iv_rotate, iv_rotate_params);
         this.addView(iv_edit, iv_edit_params);
 
+
         this.iv_scale.setOnTouchListener(mTouchListener);
         this.setOnTouchListener(mTouchListener);
         this.iv_rotate.setOnTouchListener(mTouchListener);

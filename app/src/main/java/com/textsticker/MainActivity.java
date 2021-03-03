@@ -3,6 +3,7 @@ package com.textsticker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -25,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         // add a stickerText to canvas
         StickerTextView tv_sticker = new StickerTextView(this);
-        tv_sticker.setText("hello India");
+        tv_sticker.setText("StickerView is a android UI library that make you able to use Single hand gesture to rotate, scale and flip the ‘sticker’.");
         tv_sticker.setTextcolor(getResources().getColor(R.color.design_default_color_error));
+        tv_sticker.setTextGravity(Gravity.CENTER);
 
         parent_fl.addView(tv_sticker);
 
