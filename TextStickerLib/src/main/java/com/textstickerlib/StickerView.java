@@ -76,10 +76,10 @@ public abstract class StickerView extends FrameLayout {
         this.iv_rotate = new ImageView(context);
         this.iv_edit = new ImageView(context);
 
-        this.iv_scale.setImageResource(R.drawable.ic_scale_foreground);
-        this.iv_delete.setImageResource(R.drawable.ic_delete_foreground);
-        this.iv_rotate.setImageResource(R.drawable.ic_rotation_foreground);
-        this.iv_edit.setImageResource(R.drawable.ic_edit_foreground);
+        this.iv_scale.setImageResource(R.drawable.ic_scale);
+        this.iv_delete.setImageResource(R.drawable.ic_delete);
+        this.iv_rotate.setImageResource(R.drawable.ic_rotation);
+        this.iv_edit.setImageResource(R.drawable.ic_edit);
 
         this.setTag("DraggableViewGroup");
         this.iv_border.setTag("iv_border");
@@ -436,8 +436,8 @@ public abstract class StickerView extends FrameLayout {
             border.right = (int) this.getRight() - params.rightMargin;
             border.bottom = (int) this.getBottom() - params.bottomMargin;
             Paint borderPaint = new Paint();
-            borderPaint.setStrokeWidth(6);
-            borderPaint.setColor(Color.WHITE);
+            borderPaint.setStrokeWidth(10);
+            borderPaint.setColor(Color.RED);
             borderPaint.setStyle(Paint.Style.STROKE);
             canvas.drawRect(border, borderPaint);
 
