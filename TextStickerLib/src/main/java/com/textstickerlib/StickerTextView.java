@@ -44,7 +44,6 @@ public class StickerTextView extends StickerView {
         textView.setSingleLine(false);
         textView.setTextSize(10000);
         textView.setMinTextSize(22);
-        textView.setPadding(10, 10, 10, 10);
 
 
         LayoutParams params = new LayoutParams(
