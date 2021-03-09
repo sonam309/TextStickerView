@@ -2,6 +2,7 @@ package com.textstickerlib;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -69,6 +70,14 @@ public class StickerTextView extends StickerView {
 
             textView.setGravity(gravity);
 
+        }
+
+    }
+    public void setTypeface(Typeface typeface){
+
+        if(textView!=null){
+
+            textView.setTypeface(typeface);
         }
 
     }
