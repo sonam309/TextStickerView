@@ -44,7 +44,7 @@ public class StickerTextView extends StickerView {
         textView.setSingleLine(false);
         textView.setTextSize(10000);
         textView.setMinTextSize(22);
-        textView.setPadding(10,10,10,10);
+        textView.setPadding(10, 10, 10, 10);
 
 
         LayoutParams params = new LayoutParams(
@@ -65,18 +65,19 @@ public class StickerTextView extends StickerView {
             textView.setText(text);
     }
 
-    public void setTextGravity(int gravity){
+    public void setTextGravity(int gravity) {
 
-        if(textView!=null){
+        if (textView != null) {
 
             textView.setGravity(gravity);
 
         }
 
     }
-    public void setTypeface(Typeface typeface){
 
-        if(textView!=null){
+    public void setTypeface(Typeface typeface) {
+
+        if (textView != null) {
 
             textView.setTypeface(typeface);
         }
