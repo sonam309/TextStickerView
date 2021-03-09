@@ -39,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "edit", Toast.LENGTH_SHORT).show();
 
             }
+
+            @Override
+            public void onStickerClicked() {
+
+                Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
+
+            }
         });
 
         parent_fl.setOnTouchListener(new View.OnTouchListener() {

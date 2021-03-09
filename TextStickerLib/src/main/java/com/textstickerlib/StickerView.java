@@ -163,6 +163,12 @@ public abstract class StickerView extends FrameLayout {
 
             }
         });
+        this.iv_border.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onStickerOperationListener.onStickerClicked();
+            }
+        });
 
 
         this.iv_delete.setOnClickListener(new OnClickListener() {
@@ -497,7 +503,7 @@ public abstract class StickerView extends FrameLayout {
     public interface OnStickerOperationListener {
         void onStickerAdded();
 
-//        void onStickerClicked();
+        void onStickerClicked();
 //
 //        void onStickerDeleted();
 //
