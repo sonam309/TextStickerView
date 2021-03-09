@@ -159,16 +159,12 @@ public abstract class StickerView extends FrameLayout {
                 if (StickerView.this.getParent() != null) {
 
                     onStickerOperationListener.onStickerAdded();
+                    onStickerOperationListener.onStickerClicked();
                 }
 
             }
         });
-        this.iv_border.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onStickerOperationListener.onStickerClicked();
-            }
-        });
+
 
 
         this.iv_delete.setOnClickListener(new OnClickListener() {
