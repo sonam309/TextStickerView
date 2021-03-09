@@ -243,9 +243,22 @@ public abstract class StickerView extends FrameLayout {
                         double offsetY = event.getRawY() - scale_orgY;
                         double offset = Math.max(offsetX, offsetY);
 
-                        StickerView.this.getLayoutParams().width += offsetX;
-                        StickerView.this.getLayoutParams().height += offsetY;
-                        onScaling(true);
+                        float width = iv_rotate.getLayoutParams().width;
+                        float size = width * 2;
+
+
+
+                        float width_sticker = (float) (StickerView.this.getLayoutParams().width + offset);
+                        float height_sticker= (float) (StickerView.this.getLayoutParams().height+offset);
+
+
+                        if (size <= width_sticker && size<=height_sticker) {
+
+                            StickerView.this.getLayoutParams().width += offsetX;
+                            StickerView.this.getLayoutParams().height += offsetY;
+                            onScaling(true);
+
+                        }
 
                         rotate_orgX = rotate_newX;
                         rotate_orgY = rotate_newY;
