@@ -159,7 +159,6 @@ public abstract class StickerView extends FrameLayout {
                 if (StickerView.this.getParent() != null) {
 
                     onStickerOperationListener.onStickerAdded();
-                    onStickerOperationListener.onStickerClicked();
                 }
 
             }
@@ -176,6 +175,18 @@ public abstract class StickerView extends FrameLayout {
                 }
             }
         });
+
+//        this.iv_border.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(StickerView.this.getParent()!=null){
+//
+//                    onStickerOperationListener.onStickerClicked();
+//
+//
+//                }
+//            }
+//        });
 
 
     }
@@ -278,6 +289,7 @@ public abstract class StickerView extends FrameLayout {
             } else if (view.getTag().equals("DraggableViewGroup")) {
 
                 StickerView.this.setControlsVisibility(true);
+                onStickerOperationListener.onStickerClicked();
 
 
                 switch (event.getAction()) {
